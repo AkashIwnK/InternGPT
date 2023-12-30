@@ -101,6 +101,7 @@ Otherwise, you might encounter issuses similar as [issue #5](https://github.com/
 `python -u app.py \
 --load "ImageOCRRecognition_cuda:0,Text2Image_cuda:0,SegmentAnything_cuda:0,ActionRecognition_cuda:0,VideoCaption_cuda:0,DenseCaption_cuda:0,ReplaceMaskedAnything_cuda:0,LDMInpainting_cuda:0,SegText2Image_cuda:0,ScribbleText2Image_cuda:0,Image2Scribble_cuda:0,Image2Canny_cuda:0,CannyText2Image_cuda:0,StyleGAN_cuda:0,Anything2Image_cuda:0,HuskyVQA_cuda:0" -e -p 3456 --https
 `
+`python3 -u app.py --load "ImageOCRRecognition_cpu,Text2Image_cpu,SegmentAnything_cpu,ActionRecognition_cpu,VideoCaption_cpu,DenseCaption_cpu,ReplaceMaskedAnything_cpu,LDMInpainting_cpu,SegText2Image_cpu,ScribbleText2Image_cpu,Image2Scribble_cpu,Image2Canny_cpu,CannyText2Image_cpu,StyleGAN_cpu,Anything2Image_cpu,HuskyVQA_cpu" -p 3456 --https `
 
 Now, you can access iGPT demo by visiting `https://{ip}:3456` through your browser:
 ![result](https://github.com/ErfeiCui/InternGPT/assets/135142412/897212f2-47cc-4d0c-ace3-a24f42ec5bd2)
