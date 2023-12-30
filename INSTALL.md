@@ -52,7 +52,7 @@ Otherwise, you might encounter issuses similar as [issue #5](https://github.com/
 
 ## :tent:Install dependencies
 * **Create a virtual environment**
-  `conda activate -n igpt python=3.8`
+  `conda create -n igpt -y python=3.8`
   ![1 2](https://github.com/ErfeiCui/InternGPT/assets/135142412/b6d10672-7348-4fa2-a020-10198fc1acc6)
   ![1 3](https://github.com/ErfeiCui/InternGPT/assets/135142412/bd9e5ff5-6c3a-4cd7-8347-bb8c5af5672a)
 
@@ -82,7 +82,8 @@ Otherwise, you might encounter issuses similar as [issue #5](https://github.com/
    * Install detectron2
      `git clone https://github.com/facebookresearch/detectron2.git`
      ![Inked1 9](https://github.com/ErfeiCui/InternGPT/assets/135142412/cc28482d-1df0-40e4-9e3c-ad93eee32b92)
-
+     Add cuda to the path:
+     `export PATH=/usr/local/cuda/bin:$PATH`
      `python -m pip install -e detectron2`
      ![Inked2 0](https://github.com/ErfeiCui/InternGPT/assets/135142412/b2ee729d-9a0c-4114-bf7c-0432c23a84ff)
      ![2 1](https://github.com/ErfeiCui/InternGPT/assets/135142412/b49fa28c-b766-4b33-a840-d602d47a090d)
