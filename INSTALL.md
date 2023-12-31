@@ -84,6 +84,7 @@ Otherwise, you might encounter issuses similar as [issue #5](https://github.com/
      ![Inked1 9](https://github.com/ErfeiCui/InternGPT/assets/135142412/cc28482d-1df0-40e4-9e3c-ad93eee32b92)
      Add cuda to the path:
      `export PATH=/usr/local/cuda/bin:$PATH`
+     Install detectron2:
      `python -m pip install -e detectron2`
      ![Inked2 0](https://github.com/ErfeiCui/InternGPT/assets/135142412/b2ee729d-9a0c-4114-bf7c-0432c23a84ff)
      ![2 1](https://github.com/ErfeiCui/InternGPT/assets/135142412/b49fa28c-b766-4b33-a840-d602d47a090d)
@@ -98,10 +99,14 @@ Otherwise, you might encounter issuses similar as [issue #5](https://github.com/
 
 
 ## Start the service
+Install some more packages first:
+`pip install ipdb`
+Run service:
 `python -u app.py \
 --load "ImageOCRRecognition_cuda:0,Text2Image_cuda:0,SegmentAnything_cuda:0,ActionRecognition_cuda:0,VideoCaption_cuda:0,DenseCaption_cuda:0,ReplaceMaskedAnything_cuda:0,LDMInpainting_cuda:0,SegText2Image_cuda:0,ScribbleText2Image_cuda:0,Image2Scribble_cuda:0,Image2Canny_cuda:0,CannyText2Image_cuda:0,StyleGAN_cuda:0,Anything2Image_cuda:0,HuskyVQA_cuda:0" -e -p 3456 --https
 `
-`python3 -u app.py --load "ImageOCRRecognition_cpu,Text2Image_cpu,SegmentAnything_cpu,ActionRecognition_cpu,VideoCaption_cpu,DenseCaption_cpu,ReplaceMaskedAnything_cpu,LDMInpainting_cpu,SegText2Image_cpu,ScribbleText2Image_cpu,Image2Scribble_cpu,Image2Canny_cpu,CannyText2Image_cpu,StyleGAN_cpu,Anything2Image_cpu,HuskyVQA_cpu" -p 3456 --https `
+For CPU:
+`python3 -u app.py --load "ImageOCRRecognition_cpu,Text2Image_cpu,SegmentAnything_cpu,ActionRecognition_cpu,VideoCaption_cpu,DenseCaption_cpu,ReplaceMaskedAnything_cpu,LDMInpainting_cpu,SegText2Image_cpu,ScribbleText2Image_cpu,Image2Scribble_cpu,Image2Canny_cpu,CannyText2Image_cpu,StyleGAN_cpu,Anything2Image_cpu,HuskyVQA_cpu" -e -p 3456 --https `
 
 Now, you can access iGPT demo by visiting `https://{ip}:3456` through your browser:
 ![result](https://github.com/ErfeiCui/InternGPT/assets/135142412/897212f2-47cc-4d0c-ace3-a24f42ec5bd2)
