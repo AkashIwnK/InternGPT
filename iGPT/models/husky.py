@@ -64,7 +64,7 @@ def get_gpu_memory(max_gpus=None):
 def load_model(
         model_path, device, num_gpus, max_gpu_memory=None, load_8bit=False, debug=False
 ):
-    kwargs = {"torch_dtype": torch.float16}
+    kwargs = {"torch_dtype": torch.float32} #torch.float16}
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_path, use_fast=False)
