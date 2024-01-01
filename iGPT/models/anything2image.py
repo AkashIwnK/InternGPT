@@ -7,8 +7,11 @@ from . import imagebind as ib
 
 class Anything2Image:
     def __init__(self, device,e_mode):
+        #pipe = StableUnCLIPImg2ImgPipeline.from_pretrained(
+        #    "stabilityai/stable-diffusion-2-1-unclip", torch_dtype=torch.float16, variation="fp16"
+        #)
         pipe = StableUnCLIPImg2ImgPipeline.from_pretrained(
-            "stabilityai/stable-diffusion-2-1-unclip", torch_dtype=torch.float16, variation="fp16"
+            "stabilityai/stable-diffusion-2-1-unclip", torch_dtype=torch.float32, variation="fp16"
         )
         self.device = device
         self.e_mode = e_mode
