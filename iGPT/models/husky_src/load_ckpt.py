@@ -8,11 +8,11 @@ from iGPT.models.husky_src.husky_chat import Blip2LlaMAForConditionalGeneration
 
 def apply_delta(base_model_path, target_model_path, delta_path):
     print("Loading base model")
-    base = AutoModelForCausalLM.from_pretrained(base_model_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+    base = AutoModelForCausalLM.from_pretrained(base_model_path, torch_dtype=torch.float32, low_cpu_mem_usage=True)
 
     print("Loading delta")
     delta_tokenizer = AutoTokenizer.from_pretrained(delta_path, use_fast=False)
-    delta = Blip2LlaMAForConditionalGeneration.from_pretrained(delta_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+    delta = Blip2LlaMAForConditionalGeneration.from_pretrained(delta_path, torch_dtype=torch.float32, low_cpu_mem_usage=True)
 
     print("Applying delta")
     for name, param in tqdm(delta.state_dict().items(), desc="Applying delta"):
